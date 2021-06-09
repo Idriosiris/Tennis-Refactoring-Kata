@@ -2,6 +2,12 @@ package com.example.romannumerals;
 
 public class ArabicNumbersTranslator {
     String roman(int i) {
-        return "I";
+        if(i == 1)
+            return "I";
+
+        if(i == 2)
+            return "II";
+
+        return null;
     }
 }
