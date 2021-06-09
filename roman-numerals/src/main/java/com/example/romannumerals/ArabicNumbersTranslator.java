@@ -14,10 +14,6 @@ public class ArabicNumbersTranslator {
     }
 
     public String roman(int arabicNumber) {
-        return constructRomanNumber(arabicNumber);
-    }
-
-    private String constructRomanNumber(int arabicNumber) {
         StringBuilder romanNumber = new StringBuilder();
 
         while(arabicNumber != 0) {
@@ -28,4 +24,5 @@ public class ArabicNumbersTranslator {
 
         return romanNumber.toString();
     }
+
 }
