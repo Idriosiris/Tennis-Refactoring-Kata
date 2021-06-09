@@ -12,7 +12,7 @@ public class ArabicNumbersTranslator {
         romanNumbersMap.put(1, "I");
     }
 
-    String roman(int arabicNumber) {
+    public String roman(int arabicNumber) {
         String romanNumber = constructRomanNumber(arabicNumber);
 
         return romanNumber;
