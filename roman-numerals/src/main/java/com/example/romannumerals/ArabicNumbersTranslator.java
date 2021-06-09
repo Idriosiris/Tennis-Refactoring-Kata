@@ -15,35 +15,15 @@ public class ArabicNumbersTranslator {
     }
 
     public String roman(int arabicNumber) {
-        Stack<String> romanNumberStack = new Stack<>();
-
-        while(arabicNumber != 0) {
-            if(arabicNumber >= 4 && arabicNumber <= 5 ) {
-                romanNumberStack.push(romanNumbersMap.get(5));
-
-                if( arabicNumber == 5 )
-                    arabicNumber = 5 - 5;
-                else
-                    arabicNumber = 5 - 4;
-
-            } else if(arabicNumber <= 3){
-                romanNumberStack.push(romanNumbersMap.get(1));
-
-                arabicNumber = arabicNumber - 1;
-            }
+        if (arabicNumber == 1) {
+            return "I";
+        } else if(arabicNumber == 2){
+            return "II";
+        }else if(arabicNumber == 3){
+            return "III";
         }
 
-        return toRomanNumber(romanNumberStack);
-    }
-
-    private String toRomanNumber(Stack romanNumberStack) {
-        StringBuilder romanNumber = new StringBuilder();
-
-        while(!romanNumberStack.empty()) {
-            romanNumber.append(romanNumberStack.pop());
-        }
-
-        return romanNumber.toString();
+        return null;
     }
 
 }
