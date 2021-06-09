@@ -1,6 +1,7 @@
 package com.example.romannumerals;
 
 import java.util.HashMap;
+import java.util.Stack;
 
 public class ArabicNumbersTranslator {
 
@@ -14,12 +15,28 @@ public class ArabicNumbersTranslator {
     }
 
     public String roman(int arabicNumber) {
-        StringBuilder romanNumber = new StringBuilder();
+        Stack<String> romanNumberStack = new Stack<>();
 
         while(arabicNumber != 0) {
-            romanNumber.append(romanNumbersMap.get(1));
+            if(arabicNumber == 4 ) {
+                romanNumberStack.push(romanNumbersMap.get(5));
 
-            arabicNumber = arabicNumber - 1;
+                arabicNumber = arabicNumber - 3;
+            } else if(arabicNumber <= 3){
+                romanNumberStack.push(romanNumbersMap.get(1));
+
+                arabicNumber = arabicNumber - 1;
+            }
+        }
+
+        return toRomanNumber(romanNumberStack);
+    }
+
+    private String toRomanNumber(Stack romanNumberStack) {
+        StringBuilder romanNumber = new StringBuilder();
+
+        while(!romanNumberStack.empty()) {
+            romanNumber.append(romanNumberStack.pop());
         }
 
         return romanNumber.toString();
