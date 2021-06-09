@@ -11,7 +11,6 @@ public class ArabicNumbersTranslator {
         romanNumbersMap = new HashMap<>();
 
         romanNumbersMap.put(1, "I");
-        romanNumbersMap.put(5, "V");
     }
 
     public String roman(int arabicNumber) {
