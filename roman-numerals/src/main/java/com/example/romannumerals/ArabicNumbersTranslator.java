@@ -12,11 +12,11 @@ public class ArabicNumbersTranslator {
         romanNumbersMap.put(1, "I");
     }
 
-    String roman(int i) {
-        if(i == 1)
+    String roman(int arabicNumber) {
+        if(arabicNumber == 1)
             return getI(1);
 
-        if(i == 2)
+        if(arabicNumber == 2)
             return getI(1) + getI(1);
 
         return null;
