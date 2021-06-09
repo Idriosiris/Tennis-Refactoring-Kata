@@ -10,12 +10,11 @@ public class ArabicNumbersTranslator {
         romanNumbersMap = new HashMap<>();
 
         romanNumbersMap.put(1, "I");
+        romanNumbersMap.put(5, "V");
     }
 
     public String roman(int arabicNumber) {
-        String romanNumber = constructRomanNumber(arabicNumber);
-
-        return romanNumber;
+        return constructRomanNumber(arabicNumber);
     }
 
     private String constructRomanNumber(int arabicNumber) {
@@ -24,7 +23,7 @@ public class ArabicNumbersTranslator {
         while(arabicNumber != 0) {
             romanNumber.append(romanNumbersMap.get(1));
 
-            arabicNumber--;
+            arabicNumber = arabicNumber - 1;
         }
 
         return romanNumber.toString();
