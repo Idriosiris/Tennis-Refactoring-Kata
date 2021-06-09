@@ -13,14 +13,14 @@ public class ArabicNumbersTranslator {
     }
 
     String roman(int arabicNumber) {
-        String romanNumber = "";
+        StringBuilder romanNumber = new StringBuilder();
 
         while(arabicNumber != 0) {
-            romanNumber += romanNumbersMap.get(1);
+            romanNumber.append(romanNumbersMap.get(1));
 
             arabicNumber--;
         }
 
-        return romanNumber;
+        return romanNumber.toString();
     }
 }
