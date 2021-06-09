@@ -16,11 +16,11 @@ public class ArabicNumbersTranslator {
 
     public String roman(int arabicNumber) {
         if (arabicNumber == 1) {
-            return "I";
+            return romanNumbersMap.get(1);
         } else if(arabicNumber == 2){
-            return "II";
+            return romanNumbersMap.get(1) + romanNumbersMap.get(1);
         }else if(arabicNumber == 3){
-            return "III";
+            return romanNumbersMap.get(1) + romanNumbersMap.get(1) + romanNumbersMap.get(1);
         }
 
         return null;
