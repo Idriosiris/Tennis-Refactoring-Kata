@@ -11,6 +11,7 @@ public class ArabicNumbersTranslator {
         romanNumbersMap = new HashMap<>();
 
         romanNumbersMap.put(1, "I");
+        romanNumbersMap.put(5, "V");
     }
 
     public String roman(int arabicNumber) {
@@ -20,6 +21,8 @@ public class ArabicNumbersTranslator {
             return romanNumbersMap.get(1) + romanNumbersMap.get(1);
         }else if(arabicNumber == 3){
             return romanNumbersMap.get(1) + romanNumbersMap.get(1) + romanNumbersMap.get(1);
+        }else if(arabicNumber == 4){
+            return romanNumbersMap.get(1) + romanNumbersMap.get(5);
         }
 
         return null;
