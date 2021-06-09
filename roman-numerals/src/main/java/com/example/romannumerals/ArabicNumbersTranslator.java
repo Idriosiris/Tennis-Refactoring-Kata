@@ -13,6 +13,12 @@ public class ArabicNumbersTranslator {
     }
 
     String roman(int arabicNumber) {
+        String romanNumber = constructRomanNumber(arabicNumber);
+
+        return romanNumber;
+    }
+
+    private String constructRomanNumber(int arabicNumber) {
         StringBuilder romanNumber = new StringBuilder();
 
         while(arabicNumber != 0) {
