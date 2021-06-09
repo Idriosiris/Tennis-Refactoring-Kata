@@ -29,4 +29,9 @@ class ArabicNumbersTranslatorTest {
     void fourIsIV(){
         assertThat(arabicNumbersTranslator.roman(4), is("IV"));
     }
+
+    @Test
+    void fiveIsV(){
+        assertThat(arabicNumbersTranslator.roman(5), is("V"));
+    }
 }

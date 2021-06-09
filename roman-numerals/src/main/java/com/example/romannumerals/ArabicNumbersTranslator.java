@@ -18,10 +18,14 @@ public class ArabicNumbersTranslator {
         Stack<String> romanNumberStack = new Stack<>();
 
         while(arabicNumber != 0) {
-            if(arabicNumber == 4 ) {
+            if(arabicNumber >= 4 && arabicNumber <= 5 ) {
                 romanNumberStack.push(romanNumbersMap.get(5));
 
-                arabicNumber = arabicNumber - 3;
+                if( arabicNumber == 5 )
+                    arabicNumber = 5 - 5;
+                else
+                    arabicNumber = 5 - 4;
+
             } else if(arabicNumber <= 3){
                 romanNumberStack.push(romanNumbersMap.get(1));
 
