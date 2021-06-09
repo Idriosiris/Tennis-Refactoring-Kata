@@ -15,6 +15,7 @@ public class ArabicNumbersTranslator {
 
     public String roman(int arabicNumber) {
         StringBuilder romanNumber =  new StringBuilder();
+
         while(arabicNumber != 0) {
             romanNumber.append(romanNumbersMap.get(1));
 
